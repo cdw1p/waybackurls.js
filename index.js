@@ -11,7 +11,7 @@ const getAllData = async (domain) => {
 }
 
 const checkDomain = (domain) => {
-  if (/^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9](?:\.[a-zA-Z]{2,})+$/.test(domain)) {
+  if (/(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]/g.test(domain)) {
     return true
   } else {
     return false
